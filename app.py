@@ -96,7 +96,7 @@ class Heart_Form(FlaskForm):
     slope = SelectField('The slope of the peak excercise ST segment',choices=[(0,'Downsloping'),(1,'Flat'),(2,'Upsloping')])
 
     # Fields for Graphs
-    name = StringField('Patient\'s Name', validators=[InputReqired('A username is required'),Length(min=3,max=15,message='Must be between 3 and 15 characters')])
+    name = StringField('Patient\'s Name')
     age = FloatField('Age')
     trestbps = FloatField('Resting Systolic Blood Pressure (mm Hg)')
     chol = FloatField('Serum Cholesterol Levels (mg/dl)')
