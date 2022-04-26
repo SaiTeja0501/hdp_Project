@@ -4,6 +4,7 @@ import numpy as np
 import joblib
 from wtforms import FloatField,SubmitField,SelectField,StringField
 from wtforms import validators
+from wtforms.validators import Length
 from flask_wtf import FlaskForm
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
@@ -96,7 +97,7 @@ class Heart_Form(FlaskForm):
     slope = SelectField('The slope of the peak excercise ST segment',choices=[(0,'Downsloping'),(1,'Flat'),(2,'Upsloping')])
 
     # Fields for Graphs
-    name = StringField('Patient\'s Name',[validators.DataRequired()])
+    name = StringField('Patient\'s Name',[validators.DataRequired(),Length(min=3, max=20)])
     age = FloatField('Age')
     trestbps = FloatField('Resting Systolic Blood Pressure (mm Hg)')
     chol = FloatField('Serum Cholesterol Levels (mg/dl)')
