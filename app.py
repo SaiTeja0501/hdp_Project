@@ -98,7 +98,7 @@ class Heart_Form(FlaskForm):
 
     # Fields for Graphs
     name = StringField('Patient\'s Name',[validators.DataRequired(),Length(min=3, max=20)])
-    age = FloatField('Age',[validators.DataRequired(),Length(min=1, max=130)])
+    age = FloatField('Age')
     trestbps = FloatField('Resting Systolic Blood Pressure (mm Hg)')
     chol = FloatField('Serum Cholesterol Levels (mg/dl)')
     thalach = FloatField('Maximum Heart Rate Achieved')
