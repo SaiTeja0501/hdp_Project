@@ -93,15 +93,15 @@ class Heart_Form(FlaskForm):
     cp = SelectField('Chest Pain Type',choices=[(0,'Asymptomatic'),(1,'Typical Angina'),(2,'Atypical Angina'),(3,'Non-Anginal Pain')])
     ca = SelectField('Number of vessels colored by Fluroscopy',choices=[(0,'0'),(1,'1'),(2,'2'),(3,'3')])
     sex = SelectField('Sex',choices=[(1,'Male'),(0,'Female')])
-    oldpeak = FloatField('ST depression induced by exercise relative to rest')
+    oldpeak = FloatField('ST depression induced by exercise relative to rest',[validators.NumberRange(min=1 , max=6,message='ST depression must be between 1 to 6')])
     slope = SelectField('The slope of the peak excercise ST segment',choices=[(0,'Downsloping'),(1,'Flat'),(2,'Upsloping')])
 
     # Fields for Graphs
     name = StringField('Patient\'s Name',[validators.DataRequired(),Length(min=3, max=30)])
     age = FloatField('Age',[validators.NumberRange(min=1 , max=130,message='Age must be between 1 to 130')])
-    trestbps = FloatField('Resting Systolic Blood Pressure (mm Hg)')
-    chol = FloatField('Serum Cholesterol Levels (mg/dl)')
-    thalach = FloatField('Maximum Heart Rate Achieved')
+    trestbps = FloatField('Resting Systolic Blood Pressure (mm Hg)',[validators.NumberRange(min=80 , max=200,message='Blood pressure must be between 80 to 200')])
+    chol = FloatField('Serum Cholesterol Levels (mg/dl)',[validators.NumberRange(min=130, max=560,message='cholesterol must be between 130 to 560')])
+    thalach = FloatField('Maximum Heart Rate Achieved',[validators.NumberRange(min=70 , max=200,message='Heart Rate must be between 70 to 200')])
     restecg = SelectField('Resting Electrocardiographic Results',choices=[(0,'Hypertrophy'), (1,'Normal'),(2,'ST-T Wave Abnormality')])
     fbs = SelectField('Fasting Blood Sugar Level',choices=[(0,'Less than 120 mg/dl'),(1,'Greater than 120 mg/dl')])
 
