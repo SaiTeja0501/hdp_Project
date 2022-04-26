@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import joblib
 from wtforms import FloatField,SubmitField,SelectField,StringField
-from wtforms.validators import InputRequired,Lenghth
 from flask_wtf import FlaskForm
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
