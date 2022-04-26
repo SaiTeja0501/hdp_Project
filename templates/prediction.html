@@ -8,6 +8,7 @@ Cardio-Fit: Prediction
 <head>
     {% block styles %}
     {{super()}}
+    background-image: url({{ url_for('static', filename='bg1.png') }})
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='./styles/prediction.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
