@@ -2,7 +2,7 @@
 # 💜 [Cardio-Fit](https://https://hdpsai09.herokuapp.com//)
 
 This web application was diployed in heroku.
-You can view the app here (https://Hdp-env-1.eba-ssjsxice.us-east-1.elasticbeanstalk.com/)
+You can view the app here (https://http://hdp-env-1.eba-ssjsxice.us-east-1.elasticbeanstalk.com/)
 
 Cardio-Fit is a **Machine Learning based Web Application.** It can detect whether *you are suffering from a heart disease or not*. It also creates a **personalised analytical report** depending upon your test result.
 
