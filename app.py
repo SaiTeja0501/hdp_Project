@@ -93,7 +93,7 @@ class Heart_Form(FlaskForm):
     cp = SelectField('Chest Pain Type',choices=[(0,'Asymptomatic'),(1,'Typical Angina'),(2,'Atypical Angina'),(3,'Non-Anginal Pain')])
     ca = SelectField('Number of vessels colored by Fluroscopy',choices=[(0,'0'),(1,'1'),(2,'2'),(3,'3')])
     sex = SelectField('Sex',choices=[(1,'Male'),(0,'Female')])
-    oldpeak = FloatField('ST depression induced by exercise relative to rest',[validators.NumberRange(min=1 , max=6,message='ST depression must be between 0 to 6')])
+    oldpeak = FloatField('ST depression induced by exercise relative to rest',[validators.NumberRange(min=0, max=6,message='ST depression must be between 0 to 6')])
     slope = SelectField('The slope of the peak excercise ST segment',choices=[(0,'Downsloping'),(1,'Flat'),(2,'Upsloping')])
 
     # Fields for Graphs
