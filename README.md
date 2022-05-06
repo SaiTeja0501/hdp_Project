@@ -40,7 +40,7 @@ The dataset that has been used in this project is from the UCI Machine Learning 
 
 ## 🌐 Deployment
 
-I've used **Heroku** as our preferred platform to deploy our web application.
+I've used **Heroku** and **AWS** as my preferred platform to deploy our web application.
 
   ## 🎨 Color Reference
 
